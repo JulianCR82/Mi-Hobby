@@ -3,55 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Mi Hobby: Escuchar musica</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Poppins", serif;
+            font-weight: 400;
+            font-style: italic;
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            text-align: center;
+            background-color: #f4f8fb; 
+            color: #333; 
         }
+    
         header {
-            background-color: #30e7d4;
-            color: #fff;
+            background-color: #6a9fb5; 
+            color: #ffffff; 
             padding: 20px 10px;
             text-align: center;
+            animation: colorChange 3s infinite alternate;
         }
+    
+        @keyframes colorChange {
+            0% {
+                background-color: #6a9fb5;
+            }
+            50% {
+                background-color: #84b7c9; 
+            }
+            100% {
+                background-color: #a0cedd; 
+            }
+        }
+    
         nav {
-            background-color: #469b92;
-            color: #fff;
+            background-color: #84b7c9; 
+            color: #ffffff;
             padding: 10px 0;
             text-align: center;
         }
+    
         nav a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
+    
         nav a:hover {
             text-decoration: underline;
+            color: #f8d347; 
         }
+    
         section {
             padding: 20px;
         }
+    
         article {
             margin-bottom: 20px;
         }
+    
         img {
             max-width: 100%;
             height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+            filter: grayscale(30%);
         }
+
+        img:hover {
+            animation: bounce 0.5s;
+            filter: grayscale(0);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            30%, 70% {
+                transform: translateY(-5px); 
+            }
+        }   
+    
         footer {
-            background-color: #30e7d4;
-            color: #fff;
+            background-color: #517d96; 
+            color: #ffffff;
             text-align: center;
             padding: 10px;
             position: relative;
             bottom: 0;
             width: 100%;
+            animation: colorChange 3s infinite alternate; 
         }
+
+        @keyframes colorChange {
+            0% {
+                background-color: #6a9fb5; 
+            }
+            50% {
+                background-color: #84b7c9; 
+            }
+            100% {
+                background-color: #a0cedd; 
+            }
+    }
     </style>
+    
 </head>
 <body>
     <header>
