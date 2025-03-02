@@ -16,7 +16,7 @@ header {
     color: white;
     text-align: center;
     padding: 40px 10px;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
