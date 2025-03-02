@@ -1,0 +1,82 @@
+/* Fuente y estilos generales */
+body {
+    font-family: "Poppins", sans-serif !important; /*hace que le de importancia a la fuente*/
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f8fb; 
+    color: #333; 
+}
+
+/* Header con animación de color */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /*Fondo negro con transparencia*/
+    color: white;
+    text-align: center;
+    padding: 40px 10px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2; /* Asegura que el header esté sobre el carrusel */
+    backdrop-filter: blur(2px); /* Difuminado*/
+}
+
+@keyframes colorChange {
+    0% { background-color: #6a9fb5; }
+    100% { background-color: #a0cedd; }
+}
+
+/* Estilos para el carrusel */
+.carousel-item {
+    max-height: 550px;
+}
+
+
+
+
+.carousel-item img {
+    max-height: 550px;
+    width: 100%;
+    object-fit: cover; /* Evita que se distorsione la imagen */
+    filter: grayscale(30%);
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto hover en imágenes */
+img:not(.carousel-item img):hover { /*especifica que no se tomen en cuenta las imagenes del carrusel*/
+    animation: bounce 0.5s;
+    filter: grayscale(0);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-8px); }
+}
+
+/* Estilos para la navbar */
+.navbar {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Ajustes en el navbar para móviles */
+.navbar-toggler {
+    border: none;
+}
+
+/* Ajuste en los dropdown */
+.dropdown-menu {
+    border-radius: 10px;
+    border: none;
+}
+
